@@ -31,9 +31,7 @@
                     </li>
                 </ul>
             </div>
-            <!-- /menu -->
-            <div class="toggle icon-menu"></div>
-            <div class="toggle icon-clear"></div>
+
         </nav>
     </header>
     <!--  -->
@@ -46,8 +44,8 @@
             <!--------------- OPTIONS CONTAINERS----------------- -->
             <div class="genrs-option">
                 <div id="options-container1" class="container">
-                    <div class="choice-container action" id="action">
-                        <img src="imgs/John-Wick-4.jpg" alt="Action">
+                    <div class="choice-container" id="action">
+                        <img src="imgs/John-Wick-4.jpg" alt="John Wick">
 
                         <div id="action">
                             <a href="#movies">
@@ -57,23 +55,26 @@
                             </a>
                         </div>
                     </div>
-                    <div class="choice-container action">
-                        <img src="imgs/Jason.jpg" alt="Horror">
+                    <div class="choice-container">
+                        <img src="imgs/Jason.jpg" alt="Jason">
 
                         <div id="horror">
                             <a href="#movies">
                                 <button onclick="mostrarFilmes('horror')" class="btn-genrs">
                                     <h3>Terror</h3>
-                                </button></a>
+                                </button>
+                            </a>
                         </div>
                     </div>
 
                     <div class="choice-container">
-                        <img src="imgs/filme-interestelar-og.webp  " alt="Sci-fi">
-                        <div id="scf-fi">
-                            <a href="#movies"><button onclick="" class="btn-genrs">
+                        <img src="imgs/filme-interestelar-og.webp  " alt="Interestelar">
+                        <div id="sci-fi">
+                            <a href="#movies">
+                                <button onclick="mostrarFilmes('sci-fi')" class="btn-genrs">
                                     <h3>Sci-fi</h3>
-                                </button></a>
+                                </button>
+                            </a>
                         </div>
 
                     </div>
@@ -82,23 +83,32 @@
                     <div class="choice-container">
                         <img src="imgs/Comedy.webp" alt="Comedy">
                         <div id="comedy">
-                            <a href="#movies"><button onclick="" class="btn-genrs">
+                            <a href="#movies">
+                                <button onclick="mostrarFilmes('comedy')" class="btn-genrs">
                                     <h3>Comédia</h3>
-                                </button></a>
+                                </button>
+                            </a>
                         </div>
                     </div>
                     <div class="choice-container">
                         <img src="imgs/Avatar.webp" alt="Adventure">
-                        <a href="#movies"><button class="btn-genrs">
-                                <h3>Aventura</h3>
-                            </button></a>
+                        <div id="adventure">
+                            <a href="#movies">
+                                <button onclick="mostrarFilmes('adventure')" class="btn-genrs">
+                                    <h3>Aventura</h3>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                     <div class="choice-container">
                         <img src="imgs/Romance.jpg" alt="Romance">
-                        <a href="#movies"><button class="btn-genrs">
-                                <h3>Romance</h3>
-                            </button></a>
-
+                        <div id="romance">
+                            <a href="#movies">
+                                <button onclick="mostrarFilmes('romance')" class="btn-genrs">
+                                    <h3>Romance</h3>
+                                </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,45 +129,78 @@
                 <p>Escolha um para ver a sua sinopse</p>
             </div>
             <div id="options-genrs">
-                <!-- <div class="choice-container">
-                    <img src="imgs/Comedy.webp" alt="Comedy">
-                    <button class="btn-genrs">
-                        <h3>Comédia</h3>
-                    </button>
+                <div class="choice-container">
+                    <img src="imgs/madmax.jpg" alt="Mad Max">
+                    <div id="madmax">
+                        <a href="#synopsis">
+                            <button onclick="mostrarSinopse('madmax')" class="btn-genrs">
+                                <h3>Mad Max</h3>
+                            </button>
+                        </a>
+                    </div>
                 </div>
                 <div class="choice-container">
-                    <img src="imgs/Avatar.webp" alt="Adventure">
-                    <button class="btn-genrs">
-                        <h3>Aventura</h3>
-                    </button>
+                    <img src="imgs/batman.webp" alt="O Cavaleiro das Trevas">
+                    <div id="cavaleiro">
+                        <a href="#synopsis">
+                            <button onclick="mostrarSinopse('cavaleiro')" class="btn-genrs">
+                                <h3>O Cavaleiro das Trevas</h3>
+                            </button>
+                        </a>
+                    </div>
                 </div>
                 <div class="choice-container">
-                    <img src="imgs/Romance.jpg" alt="Romance">
-                    <button class="btn-genrs">
-                        <h3>Romance</h3>
-                    </button>
-
-                </div> -->
+                    <img src="imgs/killbill.jpg" alt="Kill Bill - Volume 1">
+                    <div id="killbill">
+                        <a href="#synopsis">
+                            <button onclick="mostrarSinopse('killbill')" class="btn-genrs">
+                                <h3>Kill Bill - Volume 1</h3>
+                            </button>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <article class="synopsis-container" id="synopsis">
+        </section>
+        <section class="synopsis-container" id="synopsis">
+            <div id="info-container">
                 <div class="textSynopsis-container">
                     <ul>
-                        <li class="synopsis-title">
-                            <h3>Sinopse</h3>
-                        </li>
-                        <li class="name-movie">John Wick</li>
-                        <li>
-                            <p>Com o preço por sua cabeça cada vez maior, o lendário assassino de aluguel John Wick leva
-                                sua
-                                luta contra o High Table global enquanto procura os jogadores mais poderosos do
-                                submundo, de
-                                Nova York a Paris, do Japão a Berlim.</p>
-                        </li>
-                        <li> <a href="#" class="synopsis-btn">Saber mais</a></li>
+                        <div class="text-synopsi">
+                            <li class="synopsis-title">
+                                Sinopse
+                            </li>
+                            <li class="name-movie">
+                                Mad Max: Estrada da Fúria
+                            </li>
+                            <li>
+                                <p>Em um mundo pós-apocalíptico, Max Rockatansky acredita que a melhor forma de
+                                    sobreviver é não depender de ninguém. Porém, após ser capturado pelo tirano
+                                    Immortan
+                                    Joe e seus rebeldes, Max se vê no meio de uma guerra mortal iniciada pela
+                                    Imperatriz
+                                    Furiosa, que tenta salvar um grupo de garotas. Também tentando fugir, Max aceita
+                                    ajudá-la.</p>
+                            </li>
+                        </div>
+                        <div class="bottom-info">
+                            <li>
+
+                                <a href="https://www.rottentomatoes.com/m/mad_max_fury_road" class="rotten-btn"
+                                    target="_blank">
+                                    <img src="imgs/rotten.png" alt="Rotten Tomatoes" />
+                                </a>
+                            </li>
+                        </div>
                     </ul>
                 </div>
-                <div class="trailer-container"></div>
-            </article>
+                <div class="trailer-container">
+                    <iframe src="https://www.youtube.com/embed/hEJnMQG9ev8"
+                        title="Mad Max: Fury Road - Official Main Trailer [HD]" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="footer-bar">

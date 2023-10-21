@@ -19,6 +19,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-size: 1.2rem;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -27,16 +31,17 @@ img {
 .title {
     color: #f0f0f0;
 }
+
 html {
     scroll-behavior: smooth;
-  }
-/* NAVBAR */
+}
 
+/* ------------- HEADER -------------------*/
 #header nav {
     background-color: #000;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ff0000;
+    border-bottom: 1px solid #ea0a0a;
     width: 100%;
     position: fixed;
     top: 0;
@@ -67,14 +72,14 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active,
 nav ul li a:focus {
-    color: red;
+    color: #ea0a0a;
 }
 
 nav ul li a::after {
     content: "";
     width: 0%;
     height: 2px;
-    background: red;
+    background: #ea0a0a;
     position: absolute;
     left: 0;
     bottom: -1rem;
@@ -98,20 +103,24 @@ nav ul li a:focus::after {
 
 .genrs-home {
     text-align: center;
-    padding: 4rem 0 2rem;
+    padding: 4rem 0 1rem;
     color: #f0f0f0;
     width: 100%;
 }
+
 .genrs-home h1 {
     font-size: 3rem;
     margin: 1rem 0;
 }
 
-.genrs-option{
-min-height: 400px; 
+.genrs-option {
+    min-height: 400px;
+
 }
+
 #options-container1,
-#options-container2, #options-genrs{
+#options-container2,
+#options-genrs {
     display: flex;
     margin: 0 4rem;
     gap: 3rem;
@@ -131,7 +140,8 @@ min-height: 400px;
 }
 
 #options-container2 img,
-#options-container1 img, #options-genrs img {
+#options-container1 img,
+#options-genrs img {
     width: 400px;
     height: 350px;
     border-radius: 7px;
@@ -143,11 +153,12 @@ min-height: 400px;
     background-color: black;
     color: #f0f0f0;
     height: 100%;
-    border-bottom:2px solid red; 
-    box-shadow: 0px 0px 10px 2px red,inset 0px 0px 10px white ;
-    
-    
+    border-bottom: 2px solid #ea0a0a;
+    box-shadow: 0px 0px 10px 2px #ea0a0a, inset 0px 0px 10px #fffafa;
+
+
 }
+
 
 .btn-genrs {
     width: 40%;
@@ -157,10 +168,17 @@ min-height: 400px;
     align-items: center;
     justify-content: center;
     margin-top: 13px;
-    background-color: red;
+    background-color: #ea0a0a;
     color: #fff;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.btn-genrs:hover,
+#btn-moreOptions:hover {
+    background-color: #d91616;
+    box-shadow: 0px 0px 1px 1px #ff0000;
+    transition: 0.4s;
 }
 
 .moreOptions-genrs {
@@ -170,21 +188,27 @@ min-height: 400px;
 }
 
 #btn-moreOptions {
-    background-color: green;
+    background-color: #ea0a0a;
     padding: 1rem;
     color: #fff;
     cursor: pointer;
-    border-radius: 8rem;
+    border-radius: 1rem;
 }
 
 /* MOVIES */
-
 .movies-container .choice-container {
     border-color: blue;
+    border-bottom: 2px solid #000080;
+    box-shadow: 0px 0px 10px 2px #000080, inset 0px 0px 10px #fffafa;
 }
 
 .movies-container .btn-genrs {
-    background-color: blue;
+    background-color: #0f0fe0;
+}
+
+.movies-container .btn-genrs:hover {
+    background-color: #1a1a93be;
+    box-shadow: 0px 0px 1px 1px #0f0fe0;
 }
 
 .movies-container {
@@ -202,46 +226,78 @@ min-height: 400px;
 }
 
 /* SINOPSE */
-.synopsis-container {
+#info-container {
     display: flex;
+    padding: 2rem;
+    gap: 3rem;
+    margin: 3rem auto 2rem;
+    color: #f0f0f0;
 }
 
 .textSynopsis-container {
-    padding: 3rem;
     width: 100%;
-    margin: 6rem;
+    padding: 2rem;
     background-color: #000;
-    border-radius: 50px;
-    display: flex;
+    box-shadow: 2px 2px 0px 0px #ea0a0a;
+    border-radius: 3rem;
 }
 
+.trailer-container {
+    width: 100%;
+}
 
+.trailer-container iframe {
+    border-radius: 3rem;
+    /* width: 796px;
+    height: 448px; */
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 2px 0px 0px #ea0a0a;
+}
 
-.textSynopsis-container li {
-    padding: 1rem;
+.bottom-info {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-info img {
+    width: 100px;
+
+}
+
+.rotten-btn:hover {
+    box-shadow: 0px 0px 1px 1px #ea0a0a;
+}
+
+.rotten-btn {
+    border: 1px solid #ea0a0a;
+    padding: 0.5rem;
+    background-color: #181818;
+    cursor: pointer;
+    border-radius: 4rem;
+    display: flex;
+
+}
+
+.text-synopsi {
+    padding: 2rem 0;
 }
 
 .synopsis-title {
-    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+.textSynopsis-container li {
+    padding: 0.5rem;
 }
 
 .name-movie {
-    padding: 1rem;
-    text-transform: uppercase;
-}
-
-.textSynopsis-container p {
-    margin: 1.5rem 0;
-}
-
-.synopsis-btn {
-    background-color: green;
-    padding: 1rem 1.5rem;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 8rem;
-    margin-top: 10px;
-
+    font-weight: bold;
 }
 
 
@@ -262,41 +318,66 @@ min-height: 400px;
 }
 
 @media only screen and (max-width: 768px) {
-    html{
+    html {
         width: 100%;
     }
-    /* Esconder menu para tela pequena */
-    /* .grid {
-        display: none;
-    } */
 
-    /* Reduzir o tamanho do logo */
+    
+
+    p {
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+
     .logo img {
         width: 40px;
-        margin: 0 1rem ;
+        margin: 0 1rem;
     }
-    .genrs-home p{
-        width: 90%;
+
+    .genrs-home p {
+        width: 100%;
+
     }
+
     .grid {
         display: flex;
         font-size: 1rem;
         padding: 0;
         gap: 1.5rem;
     }
-    /* Mudar o layout dos containers de escolha de gênero e filmes */
+
+
     #options-container1,
-    #options-container2, 
-    #options-genrs {
+    #options-container2,
+    #options-genrs,
+    #info-container {
         flex-direction: column;
         align-items: center;
+
     }
-  
-    /* Ajustar tamanho das imagens */
+
+
     #options-container2 img,
-    #options-container1 img, 
+    #options-container1 img,
     #options-genrs img {
         width: 300px;
         height: 250px;
     }
+
+    .synopsis-container {
+        margin: 2rem 1rem;
+    }
+
+    .rotten-btn img {
+        width: 4rem;
+    }
+
+    .trailer-container,
+    .trailer-container iframe {
+        border-radius: 3rem;
+        width: 100%;
+        /* height: 100%; */
+    }
+
+
 }

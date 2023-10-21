@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caio Recomendação</title>
+    <link rel="stylesheet" href="styles.css" />
+
+
+</head>
+
+<body>
+    <header id="header">
+        <nav class="nav-container">
+            <!-- logo -->
+            <a href="#" class="logo">
+                <img src="imgs/ea8d11f1ffc6355b8a440106ce61d0f3.jpg" alt="LogoFilme">
+            </a>
+            <!-- menu -->
+            <div class="menu">
+                <ul class="grid">
+                    <li>
+                        <a class="title" href="#genrs">Gêneros</a>
+                    </li>
+                    <li>
+                        <a class="title" href="#movies">Filmes</a>
+                    </li>
+                    <li>
+                        <a class="title" href="#synopsis">Sinopse</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /menu -->
+            <div class="toggle icon-menu"></div>
+            <div class="toggle icon-clear"></div>
+        </nav>
+    </header>
+    <!--  -->
+    <main>
+        <section class="genrs-container" id="genrs">
+            <div class="genrs-home">
+                <p>Escolha o seu género preferido e vou te recomendar 3 opções de filmes.</p>
+                <h1>Gêneros</h1>
+            </div>
+            <!--------------- OPTIONS CONTAINERS----------------- -->
+            <div class="genrs-option">
+                <div id="options-container1" class="container">
+                    <div class="choice-container action" id="action">
+                        <img src="imgs/John-Wick-4.jpg" alt="Action">
+
+                        <div id="action">
+                            <a href="#movies">
+                                <button onclick="mostrarFilmes('action')" class="btn-genrs">
+                                    <h3>Ação</h3>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="choice-container action">
+                        <img src="imgs/Jason.jpg" alt="Horror">
+
+                        <div id="horror">
+                            <a href="#movies">
+                                <button onclick="mostrarFilmes('horror')" class="btn-genrs">
+                                    <h3>Terror</h3>
+                                </button></a>
+                        </div>
+                    </div>
+
+                    <div class="choice-container">
+                        <img src="imgs/filme-interestelar-og.webp  " alt="Sci-fi">
+                        <div id="scf-fi">
+                            <a href="#movies"><button onclick="" class="btn-genrs">
+                                    <h3>Sci-fi</h3>
+                                </button></a>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="options-container2" style="display: none;" class="container hidden">
+                    <div class="choice-container">
+                        <img src="imgs/Comedy.webp" alt="Comedy">
+                        <div id="comedy">
+                            <a href="#movies"><button onclick="" class="btn-genrs">
+                                    <h3>Comédia</h3>
+                                </button></a>
+                        </div>
+                    </div>
+                    <div class="choice-container">
+                        <img src="imgs/Avatar.webp" alt="Adventure">
+                        <a href="#movies"><button class="btn-genrs">
+                                <h3>Aventura</h3>
+                            </button></a>
+                    </div>
+                    <div class="choice-container">
+                        <img src="imgs/Romance.jpg" alt="Romance">
+                        <a href="#movies"><button class="btn-genrs">
+                                <h3>Romance</h3>
+                            </button></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!----------------- BTN MORE OPTIONS ------------>
+            <div class="moreOptions-genrs">
+                <button id="btn-moreOptions">
+                    <h3>Mais Gêneros</h3>
+                </button>
+            </div>
+
+            </div>
+        </section>
+        <!-------------- SECTION MOVIES --------------->
+        <section class="movies-container" id="movies">
+            <div class="movies-text">
+                <h2>Aqui está as 3 melhores opções de filmes para você</h2>
+                <p>Escolha um para ver a sua sinopse</p>
+            </div>
+            <div id="options-genrs">
+                <!-- <div class="choice-container">
+                    <img src="imgs/Comedy.webp" alt="Comedy">
+                    <button class="btn-genrs">
+                        <h3>Comédia</h3>
+                    </button>
+                </div>
+                <div class="choice-container">
+                    <img src="imgs/Avatar.webp" alt="Adventure">
+                    <button class="btn-genrs">
+                        <h3>Aventura</h3>
+                    </button>
+                </div>
+                <div class="choice-container">
+                    <img src="imgs/Romance.jpg" alt="Romance">
+                    <button class="btn-genrs">
+                        <h3>Romance</h3>
+                    </button>
+
+                </div> -->
+            </div>
+            <article class="synopsis-container" id="synopsis">
+                <div class="textSynopsis-container">
+                    <ul>
+                        <li class="synopsis-title">
+                            <h3>Sinopse</h3>
+                        </li>
+                        <li class="name-movie">John Wick</li>
+                        <li>
+                            <p>Com o preço por sua cabeça cada vez maior, o lendário assassino de aluguel John Wick leva
+                                sua
+                                luta contra o High Table global enquanto procura os jogadores mais poderosos do
+                                submundo, de
+                                Nova York a Paris, do Japão a Berlim.</p>
+                        </li>
+                        <li> <a href="#" class="synopsis-btn">Saber mais</a></li>
+                    </ul>
+                </div>
+                <div class="trailer-container"></div>
+            </article>
+        </section>
+    </main>
+    <footer class="footer-bar">
+        <img src="imgs/ea8d11f1ffc6355b8a440106ce61d0f3.jpg" alt="LogoFilme">
+        <p id="copyright">&copy;2023 Caio Santana</p>
+    </footer>
+    <!-- SCRIPTS.js -->
+    <script defer src="scripts.js"></script>
+</body>
+
+</html>
